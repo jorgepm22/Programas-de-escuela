@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+
+<html class="no-js" lang="">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="x-ua-compatible" content="ie=edge">
+		<title>Ingeniería Informática&mdash;</title>
+		<meta name="description" content="">
+		<meta name="viewport" conten="width=device-width, initial-scale=1">
+		<link href="https://cdn.jsdelivr.net/npm/animate.css@3.5.1" rel="stylesheet" type="text/css">
+
+		<!-- Bootstrap  -->
+		<link rel="stylesheet" href="css/bootstrap.css">
+		<!-- Owl Carousel  -->
+		<link rel="stylesheet" href="css/owl.carousel.css">
+		<link rel="stylesheet" href="css/owl.theme.default.min.css">
+		<!-- Animate.css -->
+		<link rel="stylesheet" href="css/animate.css">
+		<!-- Font Awesome -->
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+		<!-- Theme style  -->
+		<link rel="stylesheet" href="css/style.css">
+	</head>
+
+	<body>
+		<main> 
+		<div id="page-wrap">
+
+
+		<!-- ==========================================================================================================
+														HERO
+			========================================================================================================== -->
+
+		<div id="fh5co-hero-wrapper">
+			<nav class="container navbar navbar-expand-lg main-navbar-nav navbar-light">
+				<a class="navbar-brand" href="">UCAB</a>
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+
+				<div class="collapse navbar-collapse" id="navbarSupportedContent">
+					<ul class="navbar-nav nav-items-center ml-auto mr-auto">
+
+						<li class="nav-item active">
+							<a class="nav-link" href="#">Principal <span class="sr-only">(current)</span></a>
+						</li>
+						
+							<li class="nav-item">	
+											 <!--
+								<a class="nav-link" href="#" onclick="$('#fh5co-reviews').goTo();return false;">Programas</a>
+								-->
+								<a class="nav-link" href="#" @click="Programas()">Programas</a>
+							</li>
+							
+						<li class="nav-item">
+							<a class="nav-link" href="#" onclick="$('#fh5co-reviews').goTo();return false;">Planes de Clase</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#"  onclick="$('#fh5co-download').goTo();return false;">Planes de Estudio</a>
+						</li>
+					</ul>
+				</div>
+			</nav>
+
+			<div class="container fh5co-hero-inner">
+				<h1 class="animated fadeIn wow" data-wow-delay="0.4s">Escuela de Ingeniería Informática</h1>
+				<p class="animated fadeIn wow" data-wow-delay="0.67s">Universidad Católica Andrés Bello</p>
+			</div>
+
+
+		</div> <!-- first section wrapper -->
+
+		</div> <!-- main page wrapper -->
+
+	</main>
+			<script src="https://unpkg.com/vue@2.6.2/dist/vue.js"></script>
+			<script src="js/vue.js"></script>
+			<script src="https://cdn.jsdelivr.net/npm/vue@2.6.2/dist/vue.js"></script> 
+			<script src="js/jquery.min.js"></script>
+			<script src="js/bootstrap.js"></script>
+			<script src="js/owl.carousel.js"></script>
+			<script src="js/wow.min.js"></script>
+			<script src="js/main.js"></script>
+			<script src="main.js"></script>
+			<script>
+				export default{
+					created(){
+						setTimeout(() => this.$router.push('/'),2000);
+					},		
+					methods: {
+						Programas(){
+							this.$router.push('/');
+						}
+					}
+				}
+
+			</script>
+		
+	</body>
+</html>

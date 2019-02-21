@@ -1,0 +1,93 @@
+<!doctype html>
+
+<html class="no-js" lang="">
+
+<HEAD>
+
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <TITLE>ProUCAB</TITLE>
+    <meta name="description" content="">
+    <meta name="viewport" conten="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/animate.css@3.5.1" rel="stylesheet" type="text/css">
+
+
+    <style>
+        .aparecer-enter {
+            opacity: 0;
+        }
+
+        .aparecer-enter-active {
+            transition: opacity 1s;
+        }
+
+        .aparecer-leave-to {
+            opacity: 0;
+        }
+
+        .aparecer-leave-active {
+            transition: opacity 1s;
+        }
+
+        /*Animacion*/
+        .bote-enter-active {
+            animation: bounce-in .5s;
+        }    
+
+        @keyframes bounce-in {
+            0% {
+                transform: scale(0);
+            }
+
+            50% {
+                transform: scale(1.5);
+            }
+
+            100% {
+                transform: scale(1);
+            }
+        }
+    </style>
+</HEAD>
+
+<BODY>
+    <MAIN>
+
+        <button @click="mostrar!=mostrar">Mostrar/Ocultar</button>
+
+        <!-- Transition-->
+        <transition name="aparecer" appear>
+            <h1 v-if="mostrar" v-text="mensajes.transicion"></h1>
+        </transition>
+
+        <!-- Animation-->
+        <transition name="bote">
+            <h1 v-if="mostrar" v-text="mensajes.animacion"></h1>
+        </transition>
+
+        <!--Animacion CSS-->
+        <transition
+            name="animate.css"
+            enter-active-class="animated rotateInUpLeft"
+            leave-active-class="animated zoomOutUp">
+            <h1 v-if="mostrar" v-text="mensajes.animationCustom"></h1>
+        </transition>    
+
+        <pre>{{ $data }}</pre>
+
+    </MAIN>
+
+    <script src="https://unpkg.com/vue@2.6.2/dist/vue.js"></script>
+
+    <script src="js/vue.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/vue@2.6.2/dist/vue.js"></script> -->
+    <script src="main.js"></script>
+    <script src="js/jquery.min.js"></script>
+	<script src="js/bootstrap.js"></script>
+	<script src="js/owl.carousel.js"></script>
+	<script src="js/wow.min.js"></script>
+    <script src="js/main.js"></script>
+    
+</BODY>
+
+</html>
